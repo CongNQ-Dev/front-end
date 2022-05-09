@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bake</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>BAKE</h1>
+      <div class="menu">
+        <a class="neon-pink" href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">service</a>
+        <a href="#">gallery</a>
+        <a href="#">client</a>
+        <a href="#">contact</a>
+      </div>
+    </header>
+    <!-- header  -->
+    <div class="carousel">
+      <div class="carousel-items">
+        <h1>Best Bake Here</h1>
+        <p>Donec at massa nec sem eleifend fermentum.</p>
+        <button>LEARN MORE</button>
+      </div>
+    </div>
+    <!-- carousel -->
+    <!-- <div class="intro">
+      <div class="item-1">
+        <div class="item-1--content">
+          <h2>Tradition</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            expedita doloribus modi? Dolor.
+          </p>
+        </div>
+      </div>
+      <div class="item-2">
+        <div class="item-2--content">
+          <img src="../images/ab1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="item-3">
+        <div class="item-3--content">
+          <h2>Creativity</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <span class="counter">1,234,567.89</span>
+    <span class="counter">99.99</span>
+    <span class="counter">1234567</span>
+    <!-- gallery  -->
+    <div class="gallery">
+      <div class="gallery--item1">
+        <div class="gallery--item1--content">
+          <p>OUR <b>GALLERY</b></p>
+        </div>
+      </div>
+      <div class="gallery--item2">
+        <div class="gallery--item2--content"></div>
+      </div>
+      <div class="gallery--item3">
+        <div class="gallery--item3--content"></div>
+      </div>
+    </div>
+    <!-- script link  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+      integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../js/jquery.countup.js"></script>
+    <!-- script function  -->
+    <script>
+      $(".counter").countUp({
+        time: 2000,
+        delay: 10,
+      });
+    </script>
+  </body>
+</html>

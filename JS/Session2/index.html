@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Session2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- <input type="text" id="num1" />
+    <br />
+    <input type="text" name="" id="num2" />
+    <br />
+    <div id="result"></div>
+    <button onclick="demo()">nhấn e đi</button> -->
+
+    <!-- <img id="buld" onclick="controlBuld()" src="./pic_bulboff.gif" alt="" />
+    <button id="onBtn" onclick="turnOn()">turn on</button>
+    <button id="offBtn" onclick="turnOff()">turn off</button>
+    <script src="./utils.js"></script>
+    <script src="./index.js"></script> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h1>Lãi suất thẻ tín dụng</h1>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label>Tiền đã sử dụng</label>
+                  <input id="txtTienDaSD" type="number" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label>Tiền đã trả</label>
+                  <input id="txtTienDaTra" type="number" class="form-control" />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-success"
+                  onclick="tinhTien()"
+                >
+                  Tính tiền
+                </button>
+              </form>
+            </div>
+            <div id="cardFooter" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <h2>Demo tính tiền sản phẩm</h2>
+          <form>
+            <div class="form-group">
+              <label for="">Tên sản phẩm</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nhập tên sản phẩm"
+                id="tenSP"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Số lượng</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nhập số lượng"
+                id="soLuong"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Đơn giá</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nhập số tiền một sản phẩm"
+                id="donGia"
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-success"
+              onclick="tinhTienSP()"
+            >
+              Tính tiền
+            </button>
+            <p id="thongBao"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./utils.js"></script>
+    <script src="./index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
