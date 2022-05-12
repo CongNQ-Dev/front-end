@@ -18,7 +18,20 @@ function Validation() {
       return true;
     } else {
       getEle(divId).innerHTML = mess;
-      getEle(divId).style.backgroundColor = "red";
+      getEle(divId).style.color = "red";
+      return false;
+    }
+  };
+  this.checkName = function (input, divId, mess) {
+    var pattern =
+      /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+    if (input.match(pattern)) {
+      getEle(divId).innerHTML = "";
+      getEle(divId).style.backgroundColor = "";
+      return true;
+    } else {
+      getEle(divId).innerHTML = mess;
+      getEle(divId).style.color = "red";
       return false;
     }
   };

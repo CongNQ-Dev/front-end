@@ -4,26 +4,82 @@ function getEle(id) {
   return document.getElementById(id);
 }
 var dsnv = new DanhSachNhanVien();
+var validation = new Validation();
 getLocalStorage();
-function layDuLieuDauVao() {
+function layDuLieuDauVao(isAdd) {
   var taikhoan = getEle("tknv").value;
   var ten = getEle("name").value;
   var email = getEle("email").value;
   var password = getEle("password").value;
+  var datePicker = getEle("datepicker").value;
   var ngaylam = getEle("ngayLam").value;
   var giolam = getEle("gioLam").value;
   var chucvu = getEle("chucvu").value;
 
-  var nhanVien = new NhanVien(
+  //isValid: la true => cho phep them nhan vien
+  var isValid = false;
+  //dong goi
+
+  var checkEmpty = validation.checkEmpty(
     taikhoan,
-    ten,
-    email,
-    password,
-    ngaylam,
-    giolam,
-    chucvu
+    "tbTKNV",
+    "Your account is Invalid!"
   );
-  return nhanVien;
+  var checkName = validation.checkName(ten, "tbTen", "Your name is Invalid!");
+  var checkEmail = validation.checkEmail(
+    email,
+    "tbEmail",
+    "Your email is Invalid!"
+  );
+  var checkPassword = validation.checkPassword(
+    password,
+    "tbMatKhau",
+    "Your password is Invalid!"
+  );
+  var checkDateInThePast = validation.checkDateInThePast(
+    datePicker,
+    "tbNgay",
+    "Your date is in the past!"
+  );
+  var tagSelectedOffice = getEle("chucvu");
+  var checkOffice = validation.checkOffice(
+    tagSelectedOffice,
+    "tbChucVu",
+    "You have not selected a position"
+  );
+  var checkSumWorkDate = validation.checkSumWorkDate(
+    ngayLam,
+    "tbNgayLam",
+    "Your Input is Invalid"
+  );
+  var checkSumWorkHour = validation.checkSumWorkHour(
+    giolam,
+    "tbGioLam",
+    "Your Input is Invalid"
+  );
+  if (isAdd == false) {
+    isValid =
+      checkEmpty &&
+      checkName &&
+      checkEmail &&
+      checkPassword &&
+      checkSumWorkDate &&
+      checkSumWorkHour;
+  }
+
+  if (isValid) {
+    var nhanVien = new NhanVien(
+      taikhoan,
+      ten,
+      email,
+      password,
+      ngaylam,
+      giolam,
+      chucvu
+    );
+    return nhanVien;
+  }
+  return;
 }
 
 //call back function
@@ -32,10 +88,12 @@ getEle("btnThem").addEventListener("click", function () {
 });
 //them nhan vien
 getEle("btnThemNV").addEventListener("click", function () {
-  var layDuLieuDauVaos = layDuLieuDauVao();
-  if (layDuLieuDauVaos) {
-    layDuLieuDauVaos.tinhLuong();
-    dsnv.themNhanVien(layDuLieuDauVaos);
+  var dataInput = layDuLieuDauVao(false);
+  if (dataInput) {
+    document.getElementsByClassName("close")[0].click();
+    alert("Add Success!");
+    dataInput.tinhLuong();
+    dsnv.themNhanVien(dataInput);
     taoBang(dsnv.list);
     setLocalStorage();
   }
@@ -120,14 +178,15 @@ function editNhanVien(taikhoan) {
   getEle("gioLam").value = nhanVien.giolam;
   getEle("chucvu").value = nhanVien.chucvu;
 }
-getEle("btnCapNhat").addEventListener("click", function (event) {
-  event.preventDefault();
-  var nhanVien = layDuLieuDauVao();
+getEle("btnCapNhat").addEventListener("click", function () {
+  var nhanVien = layDuLieuDauVao(false);
   if (nhanVien) {
     nhanVien.tinhLuong();
     dsnv.updateNhanVien(nhanVien);
     taoBang(dsnv.list);
     setLocalStorage();
+    alert("Update Success!");
+    document.getElementsByClassName("close")[0].click();
   }
 });
 //tim kiem

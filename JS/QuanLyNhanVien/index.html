@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="css/style4.css" />
 
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
@@ -275,7 +277,7 @@
                   />
                 </div>
 
-                <span class="sp-thongbao" id="tbEmail"></span>
+                <span class="sp-thongbao d-inline-block" id="tbEmail"></span>
               </div>
 
               <div class="form-group">
@@ -308,7 +310,7 @@
                     name="ngaylam"
                     id="datepicker"
                     class="form-control"
-                    placeholder="Ngày làm"
+                    placeholder=""
                   />
                 </div>
 
@@ -364,7 +366,7 @@
                     placeholder="Tổng số giờ làm theo ngày"
                   />
                 </div>
-                <span class="sp-thongbao" id="tbGiolam"></span>
+                <span class="sp-thongbao" id="tbGioLam"></span>
               </div>
               <button id="btnReset" type="button" class="btn btn-warning">
                 Reset
@@ -374,6 +376,9 @@
 
           <!-- Modal footer -->
           <div class="modal-footer" id="modal-footer">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
             <button id="btnThemNV" type="button" class="btn btn-success">
               Thêm người dùng
             </button>
@@ -421,6 +426,7 @@
     </script>
     <script src="nhanVien.js"></script>
     <script src="DanhSachNhanvien.js"></script>
+    <script src="./validation.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

@@ -27,11 +27,17 @@ function layDuLieuDauVao(isAdd) {
   //isValid: la true => cho phep them sinh vien vao manager
   var isValid = false;
   //dong goi
+  var checkEmpty = validation.checkEmpty(id, "err", "Your id is Empty");
+  var checkEmail = validation.checkEmail(
+    email,
+    "errEmail",
+    "Your email is Invalid"
+  );
+  // var checkName= validation.checkName(name,"")
   if (isAdd == false) {
-    isValid =
-      validation.checkEmpty(id, "err", "Your id is Empty") &&
-      validation.checkEmail(email, "errEmail", "Your email is Invalid");
+    isValid = checkEmpty && checkEmail;
   }
+
   if (isValid) {
     var sinhVien = new Sinhvien(
       id,
@@ -51,12 +57,12 @@ function layDuLieuDauVao(isAdd) {
 //call back function
 getEle("btnAdd").addEventListener("click", function (event) {
   event.preventDefault();
-  var layDuLieuDauVaos = layDuLieuDauVao(false);
-  if (layDuLieuDauVaos) {
-    layDuLieuDauVaos.tinhDiemTrungBinh();
-    dssv.themSinhVien(layDuLieuDauVaos);
+  var dulieu = layDuLieuDauVao(false);
+  if (dulieu) {
+    dulieu.tinhDiemTrungBinh();
+    dssv.themSinhVien(dulieu);
     // console.log(dssv.list);
-    //console.log("sad: ", layDuLieuDauVaos.tinhDiemTrungBinh());
+    //console.log("sad: ", dulieu.tinhDiemTrungBinh());
     taoBang(dssv.list);
     setLocalStorage();
   }
