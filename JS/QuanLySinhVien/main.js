@@ -1,11 +1,20 @@
 // ke thua sinh vien
 //new
+var dssv = new DanhSachSinhVien();
+var validation = new Validation();
 function getEle(id) {
   return document.getElementById(id);
 }
-var dssv = new DanhSachSinhVien();
+
 getLocalStorage();
-function layDuLieuDauVao() {
+function checkExistStudent(student) {
+  if (student == null) {
+    return false;
+  } else {
+    return true;
+  }
+}
+function layDuLieuDauVao(isAdd) {
   var id = getEle("txtMaSV").value;
   var name = getEle("txtTenSV").value;
   var email = getEle("txtEmail").value;
@@ -15,25 +24,35 @@ function layDuLieuDauVao() {
   var math = getEle("txtDiemToan").value;
   var physical = getEle("txtDiemLy").value;
   var chemical = getEle("txtDiemHoa").value;
-
-  var sinhVien = new Sinhvien(
-    id,
-    name,
-    email,
-    pass,
-    yob,
-    course,
-    math,
-    physical,
-    chemical
-  );
-  return sinhVien;
+  //isValid: la true => cho phep them sinh vien vao manager
+  var isValid = false;
+  //dong goi
+  if (isAdd == false) {
+    isValid =
+      validation.checkEmpty(id, "err", "Your id is Empty") &&
+      validation.checkEmail(email, "errEmail", "Your email is Invalid");
+  }
+  if (isValid) {
+    var sinhVien = new Sinhvien(
+      id,
+      name,
+      email,
+      pass,
+      yob,
+      course,
+      math,
+      physical,
+      chemical
+    );
+    return sinhVien;
+  }
+  return;
 }
 //call back function
-getEle("btnAdd").addEventListener("click", function () {
-  var layDuLieuDauVaos = layDuLieuDauVao();
+getEle("btnAdd").addEventListener("click", function (event) {
+  event.preventDefault();
+  var layDuLieuDauVaos = layDuLieuDauVao(false);
   if (layDuLieuDauVaos) {
-    console.log("asdsad", layDuLieuDauVaos);
     layDuLieuDauVaos.tinhDiemTrungBinh();
     dssv.themSinhVien(layDuLieuDauVaos);
     // console.log(dssv.list);
@@ -85,6 +104,16 @@ function taoBang(arr) {
     getEle("tBodySinhVien").appendChild(tagTr);
   }
 }
+
+//reset Form
+getEle("btnReset").addEventListener("click", function () {
+  //Dom toiws casc ther input gasn value lại rỗng hết
+  getEle("formSV").reset();
+  getEle("btnUpdate").style.display = "none";
+  getEle("txtMaSV").disabled = false;
+
+  //Dom toi cac the div show ERR reset ban dau
+});
 
 function setLocalStorage() {
   var arrString = JSON.stringify(dssv.list);

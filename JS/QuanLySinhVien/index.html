@@ -17,65 +17,73 @@
       <div class="row">
         <div class="col-6 mx-auto">
           <h3 class="display-4 text-center">Quản Lý sinh viên</h3>
-          <div class="row">
-            <div class="col-6 form-group">
-              <label for="">Mã Sinh Viên : </label>
-              <input type="text" class="form-control" id="txtMaSV" />
-            </div>
-            <div class="col-6 form-group">
-              <label for="">Tên Sinh Viên : </label>
-              <input type="text" class="form-control" id="txtTenSV" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6 form-group">
-              <label for="">Email : </label>
-              <input type="text" class="form-control" id="txtEmail" />
-            </div>
-            <div class="col-6 form-group">
-              <label for="">Mật khẩu: </label>
-              <input type="text" class="form-control" id="txtPass" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6 form-group">
-              <label for="">Ngày Sinh : </label>
-              <input type="date" class="form-control" id="txtNgaySinh" />
-            </div>
-            <div class="col-6 form-group">
-              <label for="">Khóa học: </label>
-              <select name="" id="khSV" class="form-control">
-                <option>Chọn khóa học</option>
-                <option>KH001</option>
-                <option>KH002</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4 form-group">
-              <label for="">Điểm toán : </label>
-              <input type="text" class="form-control" id="txtDiemToan" />
-            </div>
-            <div class="col-4 form-group">
-              <label for="">Điểm lý : </label>
-              <input type="text" class="form-control" id="txtDiemLy" />
-            </div>
-            <div class="col-4 form-group">
-              <label for="">Điểm hóa : </label>
-              <input type="text" class="form-control" id="txtDiemHoa" />
-            </div>
-          </div>
+          <form id="formSV" action="">
+            <div class="row">
+              <div class="col-6 form-group">
+                <label for="">Mã Sinh Viên : </label>
 
-          <div class="form-group text-center">
-            <button class="btn btn-success" id="btnAdd">Thêm Sinh Viên</button>
-            <button
-              class="btn btn-success"
-              id="btnUpdate"
-              style="display: none"
-            >
-              Update
-            </button>
-          </div>
+                <input type="text" class="form-control" id="txtMaSV" />
+                <div id="err"></div>
+              </div>
+              <div class="col-6 form-group">
+                <label for="">Tên Sinh Viên : </label>
+                <input type="text" class="form-control" id="txtTenSV" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 form-group">
+                <label for="">Email : </label>
+                <input type="text" class="form-control" id="txtEmail" />
+                <div id="errEmail"></div>
+              </div>
+              <div class="col-6 form-group">
+                <label for="">Mật khẩu: </label>
+                <input type="text" class="form-control" id="txtPass" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 form-group">
+                <label for="">Ngày Sinh : </label>
+                <input type="date" class="form-control" id="txtNgaySinh" />
+              </div>
+              <div class="col-6 form-group">
+                <label for="">Khóa học: </label>
+                <select name="" id="khSV" class="form-control">
+                  <option>Chọn khóa học</option>
+                  <option>KH001</option>
+                  <option>KH002</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4 form-group">
+                <label for="">Điểm toán : </label>
+                <input type="text" class="form-control" id="txtDiemToan" />
+              </div>
+              <div class="col-4 form-group">
+                <label for="">Điểm lý : </label>
+                <input type="text" class="form-control" id="txtDiemLy" />
+              </div>
+              <div class="col-4 form-group">
+                <label for="">Điểm hóa : </label>
+                <input type="text" class="form-control" id="txtDiemHoa" />
+              </div>
+            </div>
+
+            <div class="form-group text-center">
+              <button class="btn btn-success" id="btnAdd">
+                Thêm Sinh Viên
+              </button>
+              <button
+                class="btn btn-success"
+                id="btnUpdate"
+                style="display: none"
+              >
+                Update
+              </button>
+              <button class="btn btn-success" id="btnReset ">Reset Form</button>
+            </div>
+          </form>
         </div>
         <div class="col-8 mx-auto">
           <input type="text" id="txtSearch" placeholder="nhap ten can tim" />
@@ -113,6 +121,7 @@
     ></script>
     <script src="sinhVien.js"></script>
     <script src="danhSachSV.js"></script>
+    <script src="validation.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
