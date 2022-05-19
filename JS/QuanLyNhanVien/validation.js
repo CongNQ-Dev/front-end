@@ -78,45 +78,6 @@ function Validation() {
       return true;
     }
   };
-  //   this.checkSumWorkDate = function (input, divId, mess) {
-  //     var pattern = /^\d+$/;
-  //     if (input.trim() == "") {
-  //       getEle(divId).innerHTML = mess;
-  //       getEle(divId).style.color = "red";
-  //       return false;
-  //     } else {
-  //       getEle(divId).innerHTML = "";
-  //       getEle(divId).style.backgroundColor = "";
-  //       return true;
-  //     }
-  //   };
-
-  //   this.checkSumWorkHour = function (input, divId, mess) {
-  //     var pattern = /^\d+$/;
-
-  //     if (input.trim() == "") {
-  //       getEle(divId).innerHTML = mess;
-  //       getEle(divId).style.color = "red";
-  //       return false;
-  //     } else {
-  //       getEle(divId).innerHTML = "";
-  //       getEle(divId).style.backgroundColor = "";
-  //       return true;
-  //     }
-  //   };
-  //
-  //   this.checkSumWorkDate = function (input, divId, mess) {
-  //     var pattern = /^\d+$/;
-  //     if (isNaN(input)) {
-  //       getEle(divId).innerHTML = mess;
-  //       getEle(divId).style.color = "red";
-  //       return false;
-  //     } else {
-  //       getEle(divId).innerHTML = "";
-  //       getEle(divId).style.backgroundColor = "";
-  //       return true;
-  //     }
-  //   };
 
   this.checkSumWorkDate = function (input, divId, mess) {
     var pattern = /^\d+$/;
