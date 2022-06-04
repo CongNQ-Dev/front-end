@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(106, 17, 203, 1),
+    rgba(37, 117, 252, 1)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(106, 17, 203, 1),
+    rgba(37, 117, 252, 1)
+  );
+}
+
+header {
+  display: flex;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+header {
+  background: #141414;
+}
+header .logo img {
+  max-width: 10%;
+}
+header .login_logout {
+  font-size: 12px;
+  margin: auto 0;
+}
+header .login_logout a {
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mb-lg-0,
+.my-lg-0 {
+  position: relative;
+}
+.btn-shopnow {
+  position: absolute;
+  justify-content: center;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d90429;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+.btn-shopnow:hover {
+  background-color: #ef233c;
+  color: white;
+  transition: all 0.7s;
+}
+.btn-success {
+  position: absolute;
+  left: 76%;
+  background-color: transparent;
+  border: transparent;
+  color: black;
+}
+/* carousel  */
+.carousel-item img {
+  height: 850px;
+}
+.content-table {
+  flex-wrap: wrap;
+  margin: 50px auto;
+}
+.card-space {
+  padding: 5px 5px;
+}
+.card {
+  height: 28rem;
+}
+.card:hover {
+  cursor: pointer;
+  border: 1px solid black;
+  transition: all 0.7s;
+}
+.card .card-text {
+  color: gray;
+  flex: 1 1 auto;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+}
+.icon-heart i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: black;
+  cursor: pointer;
+}
+.icon-heart i:hover {
+  color: #d90429;
+  transition: all 0.7s;
+}
+
+@media screen and (max-width: 577) {
+}
+@media screen and (max-width: 767px) {
+}
+/* max width: <=  */
+@media screen and (max-width: 991px) {
+  .header-brand {
+    display: none !important;
+  }
+}
+.demo .card {
+  background-color: white;
+}
+.demo:hover .card {
+  background-color: #edede9;
+}
+.demo .card .btn-secondary {
+  transform: scale(0.7); /* Equal to scaleX(0.7) scaleY(0.7) */
+}
+.demo:hover .card .btn-secondary {
+  transform: scale(1.1); /* Equal to scaleX(0.7) scaleY(0.7) */
+  transition: all 1s;
+  background-color: green;
+}
+.demo:hover .card-title {
+  transform: scale(1.1); /* Equal to scaleX(0.7) scaleY(0.7) */
+  transition: all 1s;
+}
+.demo:hover .card-text {
+  transform: scale(1.1); /* Equal to scaleX(0.7) scaleY(0.7) */
+  transition: all 1s;
+}
