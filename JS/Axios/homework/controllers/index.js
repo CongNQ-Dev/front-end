@@ -38,6 +38,3 @@ const createProductTable = (list) => {
   }
   getEle("tblBody").innerHTML = contentProductTableHTML;
 };
-const buyShoes = (id) => {
-  let quantityValue = getEle("quantity");
-};

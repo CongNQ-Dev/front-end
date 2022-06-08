@@ -45,7 +45,7 @@ const addProduct = () => {
     data: orderDetail,
   })
     .then(function (res) {
-      alert("Success Buy");
+      alertify.success("Add Successful");
     })
     .catch(function (err) {
       console.log(err);

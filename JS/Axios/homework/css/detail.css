@@ -54,8 +54,8 @@ body {
 .container .imgBx img {
   position: relative;
   width: 700px;
-  transform: rotate(-30deg);
-  left: -50px;
+  transform: rotate(-25deg);
+  left: -25px;
   transition: 0.9s linear;
 }
 
@@ -350,6 +350,15 @@ body {
   height: 300px;
 
   background-repeat: no-repeat;
+}
+.headline {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 50px auto;
+}
+.mg-bottom-50 {
+  margin-bottom: 50px;
 }
 /* responsive */
 @media (max-width: 1080px) {
