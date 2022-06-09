@@ -20,19 +20,18 @@ const createProductTable = (list) => {
     let shoes = list[i];
     contentProductTableHTML += `
          <div class="card-space col-12 text-center col-md-3 demo">
-         <div class="card style="width: 18rem;">
-         <img class="card-img-top" src=${shoes.image} alt="Card image cap">
-         <div class="card-body">
-           <h6 class="card-title">${shoes.name}</h6>
-           <p class="card-text" >${shoes.description}</p>
-           <p class="card-text d-none" id="quantity" >${shoes.quantity}</p>
-           <a href="detail.html?id=${shoes.id}" class="btn btn-secondary">view</a>
-           
-         </div>
-         <div class="icon-heart">
-         <i class="fa fa-heart"></i>        
-          </div>
-     </div>
+             <div class="card style="width: 18rem;">
+                 <img class="card-img-top" src=${shoes.image} alt="Card image cap">
+                <div class="card-body">
+                   <h6 class="card-title">${shoes.name}</h6>
+                   <p class="card-text" >${shoes.description}</p>
+                   <p class="card-text d-none" id="quantity" >${shoes.quantity}</p>
+                   <a href="detail.html?id=${shoes.id}" class="btn btn-secondary">view</a>       
+                  </div>
+                   <div class="icon-heart">
+                   <i class="fa fa-heart"></i>        
+                   </div>
+             </div>
          </div>
           `;
   }

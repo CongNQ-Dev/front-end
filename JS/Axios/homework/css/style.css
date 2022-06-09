@@ -100,7 +100,7 @@ header .login_logout a {
   color: gray;
   flex: 1 1 auto;
   font-size: 12px;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-overflow: ellipsis;
   /* white-space: nowrap; */
 }
@@ -151,7 +151,7 @@ header .login_logout a {
   position: absolute;
   top: 77%;
   left: 41%;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .btn-shopping:hover {
   opacity: 1;
@@ -193,10 +193,6 @@ a:hover {
   margin-right: 45px;
 }
 
-span {
-  transform: skewX(15deg);
-}
-
 span:nth-child(2) {
   width: 20px;
   margin-left: 30px;
@@ -230,8 +226,16 @@ path.two {
   animation: color_anim 1s infinite 0.4s;
 }
 
-/* SVG animations */
-
+.headline {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 50px auto;
+}
+/* carousel  */
+.owl-carousel .owl-item {
+  width: 250px;
+}
 @keyframes color_anim {
   0% {
     fill: white;
