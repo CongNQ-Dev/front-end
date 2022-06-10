@@ -13,9 +13,9 @@ const login = () => {
       password: userPass,
     },
   })
-    .then(function (res) {
+    .then(function (result) {
       // console.log(res);
-      localStorage.setItem("LOGIN", JSON.stringify(res.data));
+      localStorage.setItem("LOGIN", JSON.stringify(result.data));
       window.location.assign("index.html");
     })
     .catch(function (err) {

@@ -33,6 +33,10 @@ const getEle = (id) => document.getElementById(id);
 // });
 const addProduct = () => {
   let quantityValue = getEle("quantity").value;
+  if (quantityValue <= 0) {
+    alertify.error("Please Fill Full Informations");
+    return;
+  }
   const orderDetail = [
     {
       productId: getIDfromUrl(),

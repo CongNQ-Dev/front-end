@@ -355,7 +355,7 @@ body {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  margin: 50px auto;
+  padding: 0 0 50px 1rem;
 }
 .mg-bottom-50 {
   margin-bottom: 50px;

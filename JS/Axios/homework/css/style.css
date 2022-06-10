@@ -6,6 +6,7 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 .container-fluid {
   padding: 0;
@@ -68,12 +69,13 @@ header .login_logout a {
 .btn-success {
   position: absolute;
   left: 76%;
-  background-color: transparent;
+
+  background-color: white;
   border: transparent;
   color: black;
 }
-/* carousel  */
-.carousel-indicators li {
+
+carousel .carousel-indicators li {
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -100,9 +102,9 @@ header .login_logout a {
   color: gray;
   flex: 1 1 auto;
   font-size: 12px;
-  /* overflow: hidden; */
+  overflow: hidden;
   text-overflow: ellipsis;
-  /* white-space: nowrap; */
+  white-space: nowrap;
 }
 .icon-heart i {
   position: absolute;
@@ -230,7 +232,7 @@ path.two {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  margin: 50px auto;
+  padding: 0 0 50px 1rem;
 }
 /* carousel  */
 .owl-carousel .owl-item {
@@ -246,6 +248,9 @@ path.two {
   100% {
     fill: white;
   }
+}
+.position-fixed {
+  position: fixed;
 }
 
 @media screen and (max-width: 577) {
