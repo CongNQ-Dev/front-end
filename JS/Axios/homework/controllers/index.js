@@ -53,6 +53,11 @@ const createProductTable = (list) => {
   }
   getEle("tblBody").innerHTML = contentProductTableHTML;
 };
+// const getallProduct = () => {
+//   return axios({
+//     url: ``,
+//   });
+// };
 getEle("search-btn").addEventListener("click", function () {
   var searchValue = getEle("search-input").value;
 
@@ -60,10 +65,16 @@ getEle("search-btn").addEventListener("click", function () {
     .then(function (result) {
       console.log(result.data.content);
       createProductTable(result.data.content);
-      window.scrollTo(0, 1000);
-      // window.location.assign("category.html");
+      // window.scrollTo(0, $("#card-table"));
+      let cardTableEles = getEle("card-table").scrollIntoView();
     })
     .catch(function (err) {
       console.log(err.error);
     });
 });
+let btnShoppingEles = document.getElementsByClassName("btn-shopping");
+for (let i of btnShoppingEles) {
+  i.addEventListener("click", function () {
+    window.location.assign("category.html");
+  });
+}
