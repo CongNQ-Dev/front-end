@@ -1,0 +1,34 @@
+.red {
+  width: 50%;
+  height: 100px;
+  background-color: red;
+}
+.blue {
+  width: 50%;
+  height: 100px;
+  background-color: blue;
+}
+.black {
+  width: 50%;
+  height: 100px;
+  background-color: black;
+}
+.yellow {
+  width: 50%;
+  height: 100px;
+  background-color: yellow;
+}
+.purple {
+  width: 100%;
+  height: 100px;
+  background-color: purple;
+}
+.table {
+  width: 400px;
+}
+.row-1 {
+  display: flex;
+}
+.row-2 {
+  display: flex;
+}
