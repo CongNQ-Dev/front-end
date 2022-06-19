@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+.join {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/images/img5.jpg");
+  background-attachment: scroll;
+  background-size: cover;
+  text-align: center;
+  h1 {
+    color: white;
+  }
+
+  .input-subsribe {
+    input {
+      padding: 10px 50px !important;
+    }
+  }
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 6px 250px 8px 0;
+}
+.input-subsribe [type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  background-color: #82b62d;
+  color: white;
+  padding: 8px 16px;
+  margin-left: 3px;
+  border-radius: 0;
+  vertical-align: middle;
+}
+//an luon thang banner, bo vo input-subscribe k dc

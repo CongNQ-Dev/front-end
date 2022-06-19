@@ -1,0 +1,25 @@
+.service {
+  background-color: #f0f5f8;
+  text-align: center;
+  margin: 15px 0;
+}
+.service .service-content .item {
+  text-align: center;
+  overflow: hidden;
+  align-content: center;
+  cursor: pointer;
+}
+.service .service-content .item .service-icon {
+  color: #82b62d;
+  font-size: 2rem;
+  padding: 10px 10px;
+  display: inline-block;
+  background-color: white;
+}
+.service .service-content .item h5 {
+  font-weight: bold;
+  padding: 10px 0;
+}
+.service .service-content .item p {
+  color: #b4b4b4;
+}/*# sourceMappingURL=service.css.map */

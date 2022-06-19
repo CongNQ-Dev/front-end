@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
+}
+.footer-grids {
+  text-align: start;
+  padding-top: 50px;
+
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    text-align: start;
+    padding: 20px 0 5px 0;
+    text-transform: none;
+  }
+  p {
+    color: gray;
+  }
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+    }
+  }
+}
+.footer-copyRight {
+  background: black;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+
+  span {
+    color: green;
+    font-weight: bold;
+  }
+}

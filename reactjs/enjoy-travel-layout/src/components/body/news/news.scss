@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+.news {
+  //khong css h1 no an cua thang welacome
+  h1 {
+    padding: 30px 0;
+  }
+  padding: 15px;
+  .left-content {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 350px;
+    }
+    .form-control {
+    }
+  }
+  .right-content {
+    display: flex;
+    align-items: center;
+    .admin {
+      margin-right: 50px;
+    }
+  }
+  h2 {
+    text-align: start;
+    letter-spacing: 0;
+    font-size: 3.5rem;
+    text-transform: none;
+    font-weight: bolder;
+    padding: 22px 0;
+  }
+  .btn-leafGreen {
+    background-color: #82b62d;
+    color: white;
+    padding: 5px 20px;
+
+    border-radius: 0;
+  }
+}
