@@ -27,7 +27,7 @@ input,
 optgroup,
 select,
 textarea {
-  padding: 6px 250px 8px 0;
+  padding: 6px 250px 8px 10px;
 }
 
 .input-subsribe [type=button]:not(:disabled),
