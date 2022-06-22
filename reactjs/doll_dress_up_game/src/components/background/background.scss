@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+.dress-background {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  background-image: url("../../assets/images/dressBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .girl {
+    position: absolute;
+    height: 80%;
+    bottom: 0;
+    right: 20%;
+  }
+  .text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 50px;
+    z-index: 1;
+    .text__3d {
+      display: inline-block;
+      font-family: "Permanent Marker", cursive;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 100px;
+      line-height: 68px;
+      position: relative;
+      z-index: 0;
+      color: #ff006e;
+
+      text-decoration: none;
+      &::after,
+      &::before {
+        content: attr(data-line);
+        position: absolute;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+      }
+    }
+  }
+}
+
+// text 3d
+
+.text__3d:before {
+  color: #8338ec;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: rotate(-3deg);
+  animation: shakeBefore 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+  animation-delay: 0.3s;
+}
+
+.text__3d:after {
+  color: #4cc9f0;
+  top: 0px;
+  left: 0px;
+  z-index: -2;
+  animation: shakeAfter 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+  transform: rotate(3deg);
+}
+// button play
+button {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgb(207, 207, 207);
+  cursor: pointer;
+}
+
+button:hover {
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 8px #f9f8fc;
+}
+
+.btn-play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px #d9d4e7;
+  width: 200px;
+  height: 65px;
+  background-color: #fae1dd;
+  animation-duration: 2s;
+  .button-os {
+    position: absolute;
+    width: 200px;
+    height: 65px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #f9f8fc;
+    border: 2.5px solid #0e172c;
+    transition: background-color 2.2s;
+    transition-duration: 3s;
+    transition: 1.5s;
+    &:hover {
+      position: absolute;
+      top: 30px;
+      background-color: #fec7d7;
+    }
+    a {
+      font-size: 20px;
+      display: block;
+      text-decoration: none;
+      color: #0e172c;
+      transition: 1.5s;
+    }
+    &:hover {
+      letter-spacing: 5px;
+    }
+  }
+}
+
+@keyframes shakeBefore {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+@keyframes shakeAfter {
+  10%,
+  90% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}

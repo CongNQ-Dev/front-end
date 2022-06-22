@@ -4,6 +4,7 @@ export default class PropsStateChild extends Component {
   state = {
     img: this.props.father.arrProduct[0].image,
   };
+
   render() {
     const { father } = this.props;
 

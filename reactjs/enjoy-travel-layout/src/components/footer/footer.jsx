@@ -101,7 +101,7 @@ export default class Footer extends Component {
           <Container>
             <p>
               © 2022 Njoy Travels. All rights reserved | Design by{" "}
-              <span> Nguyen Quoc Cong</span>
+               <span> Nguyen Quoc Cong</span>
             </p>
           </Container>
         </div>

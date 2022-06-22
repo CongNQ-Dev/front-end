@@ -9,6 +9,7 @@ import "./App.css";
 // import States from "./state/states";
 import Props from "./props/Props";
 import PropsState from "./propsStatePractice/propsState";
+import Main from "./redux/game/main.js/main";
 
 function App() {
   //react: duoc xay dung trb co so componetn va chay theo co che single page
@@ -34,6 +35,7 @@ function App() {
     <div>
       {/* <Props /> */}
       <PropsState />
+      {/* <Main /> */}
     </div>
   );
 }

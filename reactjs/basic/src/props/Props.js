@@ -31,7 +31,7 @@ export default class Props extends Component {
         },
       ],
     };
-    //props duoc gieu la truyen gia tri tu cha sang con
+    //props duoc hieu la truyen gia tri tu cha sang con
     //va cach thuc viet la tu khoa khai bao bien: xxxx= {data truyen vao}
     return (
       <div>
