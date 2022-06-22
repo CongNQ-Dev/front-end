@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import girl from "../../assets/images/starActor.png";
+import girl from "../../assets/images/girl.png";
 import trangphuc4 from "../../assets/images/trangphuc4.png";
 import trangphuc1 from "../../assets/images/trangphuc1.png";
 import trangphuc2 from "../../assets/images/trangphuc2.png";
@@ -33,21 +33,62 @@ export default class Room extends Component {
         <img className="present-outfit" src={this.state.outfit} alt="" />
         <div className="closet">
           <Row>
-            <Col>
+            <Col md={2}>
               <div onClick={() => changeOutfit(trangphuc1)}>
-                <img className="outfit1" src={trangphuc1} alt="" />
+                <img src={trangphuc1} alt="" />
               </div>
             </Col>
-            <Col>
+            <Col md={2}>
               <div onClick={() => changeOutfit(trangphuc2)}>
                 <img src={trangphuc2} alt="" />
               </div>
             </Col>
-            <Col>
+            <Col md={2}>
               <div onClick={() => changeOutfit(trangphuc3)}>
                 <img src={trangphuc3} alt="" />
               </div>
             </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div onClick={() => changeOutfit(trangphuc4)}>
+                <img src={trangphuc4} alt="" />
+              </div>
+            </Col>
+            <Col>
+              <div onClick={() => changeOutfit(trangphuc5)}>
+                <img src={trangphuc5} alt="" />
+              </div>
+            </Col>
+            <Col>
+              <div onClick={() => changeOutfit(trangphuc6)}>
+                <img src={trangphuc6} alt="" />
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div onClick={() => changeOutfit(trangphuc7)}>
+                <img src={trangphuc7} alt="" />
+              </div>
+            </Col>
+            <Col>
+              <div onClick={() => changeOutfit(trangphuc8)}>
+                <img src={trangphuc8} alt="" />
+              </div>
+            </Col>
+            <Col>
+              <div onClick={() => changeOutfit(trangphuc9)}>
+                <img src={trangphuc9} alt="" />
+              </div>
+            </Col>
+            <Row>
+              <Col md={4}>
+                <div onClick={() => changeOutfit(trangphuc10)}>
+                  <img src={trangphuc10} alt="" />
+                </div>
+              </Col>
+            </Row>
           </Row>
         </div>
       </div>

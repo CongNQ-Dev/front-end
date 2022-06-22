@@ -24,11 +24,18 @@
 }
 .room-background .present-outfit {
   position: absolute;
-  width: 8%;
-  height: 38%;
-  bottom: 181px;
-  right: 20.3%;
+  width: 12%;
+  bottom: 230px;
+  right: 20.2%;
 }
 .room-background .closet {
-  width: 20%;
+  width: 50%;
+}
+.room-background .closet .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.room-background .closet .row img {
+  width: 75%;
 }/*# sourceMappingURL=room.css.map */
